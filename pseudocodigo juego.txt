@@ -1,0 +1,53 @@
+Start
+    declare integer n, time_limit
+    declare list of characters values
+    declare character hidden_value, guess
+    declare 2D array of characters grid[n][n]
+
+    display "Ingrese el tamaño de la cuadrícula (n*n): "
+    input n
+
+    time_limit <- calcular_tiempo_limite(n)
+
+    generate_grid(n, values, grid)
+    display "Memorice la cuadrícula durante ", time_limit, " segundos:"
+    mostrar_cuadricula(grid)
+    esperar(time_limit)
+
+    hide_value(grid, values, hidden_value)
+    mostrar_cuadricula_oculta(grid)
+    
+    display "Ingrese su suposición sobre la ubicación del valor oculto: "
+    input guess
+
+    if guess = hidden_value then
+        display "¡Has encontrado el valor oculto correctamente!"
+    else
+        display "Lo siento, tu suposición es incorrecta. El valor oculto era ", hidden_value
+    end if
+
+    display "¿Desea jugar de nuevo? (Sí/No): "
+    input respuesta
+    if respuesta = "Sí" then
+        Start
+    else
+        Stop
+    end if
+
+function calcular_tiempo_limite(n)
+    tiempo_base <- 3
+    tiempo_extra <- 0.5 * (n - 3)
+    tiempo_limite <- tiempo_base + tiempo_extra
+    return tiempo_limite
+
+function generate_grid(n, values, grid)
+
+function hide_value(grid, values, hidden_value)
+
+function mostrar_cuadricula(grid)
+
+function mostrar_cuadricula_oculta(grid)
+
+function esperar(tiempo)
+
+Stop

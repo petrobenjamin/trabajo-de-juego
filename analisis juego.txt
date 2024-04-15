@@ -1,0 +1,36 @@
+Descripción del Problema:
+
+El problema consiste en desarrollar un juego de memoria donde el jugador debe encontrar un valor oculto en una cuadrícula de caracteres. El juego simula la memoria de valores durante un tiempo limitado y luego oculta un valor aleatorio dentro de la cuadrícula. El jugador debe recordar la ubicación del valor oculto y encontrarlo antes de que se revele la respuesta.
+
+Entrada:
+
+El tamaño de la cuadrícula (n * n), ingresado por el usuario durante la ejecución del programa.
+
+Salida:
+
+Mensajes indicando si el jugador ha encontrado el valor oculto correctamente o no.
+Un mensaje preguntando al jugador si desea jugar de nuevo.
+
+Otras Variables:
+
+values: Una lista que contiene una combinación de letras, dígitos y caracteres especiales para llenar la cuadrícula.
+hidden_value: El valor oculto dentro de la cuadrícula.
+guess: La suposición del jugador sobre el valor oculto.
+time_limit: El límite de tiempo para memorizar la cuadrícula antes de ocultar el valor.
+grid: La cuadrícula de caracteres donde se oculta el valor y se muestra al jugador.
+
+Proceso:
+
+Se solicita al usuario el tamaño de la cuadrícula (n * n).
+Se genera la cuadrícula con valores aleatorios utilizando la función generate_grid(n).
+Se muestra la cuadrícula al jugador para que la memorice durante un tiempo limitado.
+Se oculta un valor aleatorio dentro de la cuadrícula utilizando la función hide_value(grid, value).
+Se muestra la cuadrícula al jugador nuevamente, esta vez con el valor oculto reemplazado por un asterisco (*).
+Se solicita al jugador que ingrese su suposición sobre la ubicación del valor oculto.
+Se revela el valor oculto y se muestra si la suposición del jugador fue correcta o no.
+Se pregunta al jugador si desea jugar de nuevo. Si la respuesta es negativa, el programa termina.
+
+Restricciones:
+
+Se recomienda utilizar un tamaño de cuadrícula razonable para una experiencia de juego adecuada.
+El tiempo de memorización se calcula dinámicamente en función del tamaño de la cuadrícula, asegurando al menos 3 segundos más 0.5 segundos por cada fila o columna adicional más allá de 3.
